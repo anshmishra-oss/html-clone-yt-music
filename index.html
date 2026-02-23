@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Music Site</title>
+</head>
+
+<body style="font-family: Arial; background:#111; color:white; text-align:center;">
+
+<h1 style="color:red;">My Music Website</h1>
+
+<input type="text" placeholder="Search song..." style="padding:8px; width:200px;">
+
+<h2>Songs</h2>
+
+<div style="margin:20px;">
+  <img src="https://picsum.photos/200?1"><br>
+  <b>Song 1</b><br>
+  <button onclick="playSong('song1.mp3')">Play</button>
+</div>
+
+<div style="margin:20px;">
+  <img src="https://picsum.photos/200?2"><br>
+  <b>Song 2</b><br>
+  <button onclick="playSong('song2.mp3')">Play</button>
+</div>
+
+<div style="margin:20px;">
+  <img src="https://picsum.photos/200?3"><br>
+  <b>Song 3</b><br>
+  <button onclick="playSong('song3.mp3')">Play</button>
+</div>
+
+<br><br>
+
+<audio id="player" controls></audio>
+
+<script>
+function playSong(file) {
+  document.getElementById("player").src = file;
+}
+</script>
+
+</body>
+</html>
